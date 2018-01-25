@@ -16,5 +16,10 @@ namespace ImageProcessing
         {
             InitializeComponent();
         }
+
+        private void load_Click(object sender, EventArgs e)
+        {
+            loader.
+        }
     }
 }
