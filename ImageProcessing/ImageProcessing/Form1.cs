@@ -12,7 +12,7 @@ namespace ImageProcessing
 {
     public partial class Form1 : Form
     {
-        string img;
+        
         public Form1()
         {
             InitializeComponent();
