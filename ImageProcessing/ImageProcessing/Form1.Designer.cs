@@ -30,10 +30,10 @@
         {
             this.load = new System.Windows.Forms.Button();
             this.detect = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureB = new System.Windows.Forms.PictureBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureB)).BeginInit();
             this.SuspendLayout();
             // 
             // load
@@ -55,14 +55,14 @@
             this.detect.Text = "&Detectar";
             this.detect.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureB
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 322);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureB.Location = new System.Drawing.Point(12, 12);
+            this.pictureB.Name = "pictureB";
+            this.pictureB.Size = new System.Drawing.Size(441, 322);
+            this.pictureB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureB.TabIndex = 1;
+            this.pictureB.TabStop = false;
             // 
             // openFile
             // 
@@ -82,12 +82,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 346);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureB);
             this.Controls.Add(this.detect);
             this.Controls.Add(this.load);
             this.Name = "Form1";
             this.Text = "Analisis de imagenes";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,7 +97,7 @@
 
         private System.Windows.Forms.Button load;
         private System.Windows.Forms.Button detect;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureB;
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.Label label1;
     }

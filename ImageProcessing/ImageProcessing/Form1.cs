@@ -21,8 +21,7 @@ namespace ImageProcessing
         private void load_Click(object sender, EventArgs e)
         {
             openFile.ShowDialog();
-            img = openFile.
-            label1.Text = img;
+            pictureB.Image = new Bitmap(openFile.FileName);
         }
     }
 }
