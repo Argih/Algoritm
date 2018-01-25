@@ -12,6 +12,7 @@ namespace ImageProcessing
 {
     public partial class Form1 : Form
     {
+        string img;
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace ImageProcessing
 
         private void load_Click(object sender, EventArgs e)
         {
-            loader.
+            openFile.ShowDialog();
+            img = openFile.
+            label1.Text = img;
         }
     }
 }
