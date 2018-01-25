@@ -54,6 +54,7 @@
             this.detect.TabIndex = 0;
             this.detect.Text = "&Detectar";
             this.detect.UseVisualStyleBackColor = true;
+            this.detect.Click += new System.EventHandler(this.detect_Click);
             // 
             // pictureB
             // 
