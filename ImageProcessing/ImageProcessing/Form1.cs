@@ -12,24 +12,38 @@ namespace ImageProcessing
 {
     public partial class Form1 : Form
     {
-        
+        bool isOpen;
         public Form1()
         {
             InitializeComponent();
+            isOpen = false;
         }
 
         private void load_Click(object sender, EventArgs e)
         {
-            openFile.ShowDialog();
-            pictureB.Image = new Bitmap(openFile.FileName);
+            if (openFile.ShowDialog() != DialogResult.Cancel)
+            {
+                isOpen = true;
+            }
+            if (isOpen)
+            {
+                pictureB.Image = new Bitmap(openFile.FileName);
+            }
         }
 
         private void detect_Click(object sender, EventArgs e)
         {
-            Bitmap img = new Bitmap(openFile.FileName);
-            ProcessingAlgo IP = new ProcessingAlgo(img);
-            Point p_c = IP.findCircleCenter();
-            Console.WriteLine(p_c.ToString());
+            if (isOpen)
+            {
+                Bitmap img = new Bitmap(openFile.FileName);
+                ProcessingAlgo IP = new ProcessingAlgo(img);
+                Point p_c = IP.findCenter();
+                Console.WriteLine(p_c.ToString());
+            }
+            else
+            {
+                
+            }
         }
     }
 }
