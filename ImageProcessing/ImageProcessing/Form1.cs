@@ -39,6 +39,7 @@ namespace ImageProcessing
                 ProcessingAlgo IP = new ProcessingAlgo(img);
                 Point p_c = IP.findCenter();
                 Console.WriteLine(p_c.ToString());
+                //lol
             }
             else
             {
