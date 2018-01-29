@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ImageProcessing
 {
     public partial class Form1 : Form
-    {
+    {   
         bool isOpen;
         public Form1()
         {
@@ -37,14 +37,16 @@ namespace ImageProcessing
             {
                 Bitmap img = new Bitmap(openFile.FileName);
                 ProcessingAlgo IP = new ProcessingAlgo(img);
-                Point p_c = IP.findCenter();
-                Console.WriteLine(p_c.ToString());
-                //lol
+                /*  Point p_c = IP.findCenter();
+                  Console.WriteLine(p_c.ToString());  */
+                Circle c=IP.findCenter();
+                pictureB.Image= IP.drawCircle(c);
             }
             else
             {
                 
             }
         }
+
     }
 }
