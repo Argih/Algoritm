@@ -16,12 +16,13 @@ namespace ImageProcessing
         {
             int x_i, x_c, x_f;
             int y_i, y_c, y_f;
-            for(int j = 0; j < bmp.Height; j++)
+
+            for (int j = 0; j < bmp.Height; j++)
             {
-                for(int i = 0; i < bmp.Width; i++)
-                {   
+                for (int i = 0; i < bmp.Width; i++)
+                {
                     //circulo encontrado
-                    if(bmp.GetPixel(i,j).R==0 && bmp.GetPixel(i, j).B == 0 && bmp.GetPixel(i, j).G == 0)
+                    if (bmp.GetPixel(i, j).R == 0 && bmp.GetPixel(i, j).B == 0 && bmp.GetPixel(i, j).G == 0)
                     {
                         x_i = i;
                         y_i = j;
@@ -48,7 +49,7 @@ namespace ImageProcessing
                 }
             }
             return new Point(-1, -1);
-        }
+        } 
 
     }
 }
