@@ -13,12 +13,9 @@ namespace ImageProcessing
 
         private void calculateRadius(int x, int y)
         {
-            radius =(float) Math.Sqrt((Math.Pow((x - cX), 2) - Math.Pow((y - cY), 2)));
+            radius =(float) Math.Sqrt((Math.Pow((x - cX), 2) + Math.Pow((y - cY), 2)));
         }
         public Circle() { }
-
-
-
         public Circle(int x, int y, int a, int b)
         {
             cX = x;

@@ -37,8 +37,10 @@ namespace ImageProcessing
             {
                 Bitmap img = new Bitmap(openFile.FileName);
                 ProcessingAlgo IP = new ProcessingAlgo(img);
-                Point p_c = IP.findCenter();
-                Console.WriteLine(p_c.ToString());  
+                /*  Point p_c = IP.findCenter();
+                  Console.WriteLine(p_c.ToString());  */
+                IP.findCenter();
+                pictureB.Image = IP.getBmp();
             }
             else
             {
