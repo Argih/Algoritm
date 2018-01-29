@@ -39,8 +39,8 @@ namespace ImageProcessing
                 ProcessingAlgo IP = new ProcessingAlgo(img);
                 /*  Point p_c = IP.findCenter();
                   Console.WriteLine(p_c.ToString());  */
-                IP.findCenter();
-                pictureB.Image = IP.getBmp();
+                Circle c=IP.findCenter();
+                pictureB.Image= IP.drawCircle(c);
             }
             else
             {

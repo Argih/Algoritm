@@ -10,27 +10,32 @@ namespace ImageProcessing
     class ProcessingAlgo
     {
         private Bitmap bmp;
-        List<Circle> list;
+        //List<Circle> list;
         public ProcessingAlgo()
         {
-            list = new List<Circle>();
+           // list = new List<Circle>();
         }
         public ProcessingAlgo(Bitmap img)
         {
             bmp = new Bitmap(img);
-            list = new List<Circle>();
+            //list = new List<Circle>();
         }    
         public Bitmap getBmp() {return bmp; }
-        private Bitmap drawCircle(Circle c)
+        public Bitmap drawCircle(Circle c)
         {
             Graphics G = Graphics.FromImage(bmp);
             Pen pen = new Pen(Color.Red);
             SolidBrush brush = new SolidBrush(Color.Red);
-            G.DrawEllipse(pen, (c.getCenterX()), ((c.getCentery())), c.getDiameter(), c.getDiameter());
-            G.FillEllipse(brush, (c.getCenterX()), ((c.getCentery())), c.getDiameter(), c.getDiameter());
+            float F = 4.4f;
+            float d = c.getRadius();
+            int a = c.getCenterX()- (int)(d*2.2);
+            int b = c.getCentery()- (int)(d*2.2);
+           
+            G.DrawEllipse(pen, a, b, d*F, d*F);
+            G.FillEllipse(brush, a, b, d*F, d*F);
             return bmp;
         }
-        public void findCenter()
+        public Circle findCenter()
         {
             int x_i, x_c, x_f;
             int y_i, y_c, y_f;
@@ -52,9 +57,9 @@ namespace ImageProcessing
                                 break;
                             }
                         }
-                        for (y_f = x_i; y_f < bmp.Height; y_f++)
+                        for (y_f = y_i; y_f < bmp.Height; y_f++)
                         {
-                            if (bmp.GetPixel(y_f, x_i).R != 0 && bmp.GetPixel(y_f, x_i).B != 0 && bmp.GetPixel(y_f, x_i).G != 0)
+                            if (bmp.GetPixel(x_i, y_f).R != 0 && bmp.GetPixel(x_i,y_f).B != 0 && bmp.GetPixel(x_i, y_f).G != 0)
                             {
                                 y_f--;
                                 break;
@@ -62,15 +67,18 @@ namespace ImageProcessing
                         }
                         x_c = (x_i + x_f) / 2;
                         y_c = (y_i + y_f) / 2;
-                        Circle circle = new Circle(x_c, y_c, x_f, j);
+
+                        Circle circle = new Circle(x_c, y_c, x_i, j);
                         Console.WriteLine(circle.getCenterX());
                         Console.WriteLine(circle.getCentery());
                         Console.WriteLine(circle.getDiameter());
-                        list.Add(circle);
-                        bmp = drawCircle(circle);
+                        return circle;
+                        //list.Add(circle);
+                        
                     }
                 }
             }
+            return new Circle(-1, -1, 1);
             
         }
 
