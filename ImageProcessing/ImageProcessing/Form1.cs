@@ -19,6 +19,7 @@ namespace ImageProcessing
             isOpen = false;
         }
 
+
         private void load_Click(object sender, EventArgs e)
         {
             if (openFile.ShowDialog() != DialogResult.Cancel)
@@ -36,15 +37,13 @@ namespace ImageProcessing
             if (isOpen)
             {
                 Bitmap img = new Bitmap(openFile.FileName);
-                ProcessingAlgo IP = new ProcessingAlgo(img);
-                /*  Point p_c = IP.findCenter();
-                  Console.WriteLine(p_c.ToString());  */
-                Circle c=IP.findCenter();
-                pictureB.Image= IP.drawCircle(c);
+                ProcessingAlgo IP = new ProcessingAlgo(img, ref pictureB);
+                IP.findCenter();
+                IP.printList();
             }
             else
             {
-                
+                MessageBox.Show("No has seleccionado ninguna imagen");
             }
         }
 
