@@ -38,7 +38,7 @@
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(463, 270);
+            this.load.Location = new System.Drawing.Point(662, 458);
             this.load.Name = "load";
             this.load.Size = new System.Drawing.Size(75, 23);
             this.load.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // detect
             // 
-            this.detect.Location = new System.Drawing.Point(463, 311);
+            this.detect.Location = new System.Drawing.Point(662, 487);
             this.detect.Name = "detect";
             this.detect.Size = new System.Drawing.Size(75, 23);
             this.detect.TabIndex = 0;
@@ -60,8 +60,8 @@
             // 
             this.pictureB.Location = new System.Drawing.Point(12, 12);
             this.pictureB.Name = "pictureB";
-            this.pictureB.Size = new System.Drawing.Size(441, 322);
-            this.pictureB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureB.Size = new System.Drawing.Size(644, 488);
+            this.pictureB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureB.TabIndex = 1;
             this.pictureB.TabStop = false;
             // 
@@ -81,11 +81,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 346);
+            this.ClientSize = new System.Drawing.Size(749, 522);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureB);
             this.Controls.Add(this.detect);
             this.Controls.Add(this.load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Analisis de imagenes";
             ((System.ComponentModel.ISupportInitialize)(this.pictureB)).EndInit();

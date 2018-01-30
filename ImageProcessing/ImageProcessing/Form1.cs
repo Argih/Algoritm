@@ -11,13 +11,14 @@ using System.Windows.Forms;
 namespace ImageProcessing
 {
     public partial class Form1 : Form
-    {
+    {   
         bool isOpen;
         public Form1()
         {
             InitializeComponent();
             isOpen = false;
         }
+
 
         private void load_Click(object sender, EventArgs e)
         {
@@ -36,14 +37,15 @@ namespace ImageProcessing
             if (isOpen)
             {
                 Bitmap img = new Bitmap(openFile.FileName);
-                ProcessingAlgo IP = new ProcessingAlgo(img);
-                Point p_c = IP.findCenter();
-                Console.WriteLine(p_c.ToString());
+                ProcessingAlgo IP = new ProcessingAlgo(img, ref pictureB);
+                IP.findCenter();
+                IP.printList();
             }
             else
             {
-                
+                MessageBox.Show("No has seleccionado ninguna imagen");
             }
         }
+
     }
 }
