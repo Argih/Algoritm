@@ -38,7 +38,7 @@
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(662, 458);
+            this.load.Location = new System.Drawing.Point(662, 426);
             this.load.Name = "load";
             this.load.Size = new System.Drawing.Size(75, 23);
             this.load.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // detect
             // 
-            this.detect.Location = new System.Drawing.Point(662, 487);
+            this.detect.Location = new System.Drawing.Point(662, 477);
             this.detect.Name = "detect";
             this.detect.Size = new System.Drawing.Size(75, 23);
             this.detect.TabIndex = 0;
