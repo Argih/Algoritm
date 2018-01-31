@@ -28,7 +28,7 @@ namespace ImageProcessing
         {
             for (int i=0; i<list.Count;i++)
             {
-                String myString = String.Format("{0}{1},{2}{3}", "{", list[i].getCentery(), list[i].getCenterX(),"}");
+                String myString = String.Format("{0}{1},{2},{3}{4}", "{", list[i].getCenterX(), list[i].getCentery(),list[i].getRadius(),"}");
                 Console.WriteLine(myString);
   
             }
@@ -38,10 +38,10 @@ namespace ImageProcessing
             Graphics G = Graphics.FromImage(bmp);
             Pen pen = new Pen(Color.Red);
             SolidBrush brush = new SolidBrush(Color.Red);
-            float F = 4.4f;
+            float F = 5f;
             float d = c.getRadius();
-            int a = c.getCenterX()- (int)(d*2.2);
-            int b = c.getCentery()- (int)(d*2.2);
+            int a = c.getCenterX()- (int)(d*2.5);
+            int b = c.getCentery()- (int)(d*2.5);
            
             G.DrawEllipse(pen, a, b, d*F, d*F);
             G.FillEllipse(brush, a, b, d*F, d*F);
@@ -82,11 +82,9 @@ namespace ImageProcessing
                         
 
                         Circle circle = new Circle(x_c, y_c, x_i, j);
-                        list.Add(circle); 
+                        list.Add(circle);
                         drawCircle(circle);
                         bmp.SetPixel(x_c, y_c, Color.White);
-
-
                     }
                 }
             }
