@@ -1,4 +1,5 @@
-﻿using System;
+﻿//formulario inicial
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,7 @@ namespace ImageProcessing
             if (isOpen)
             {
                 Bitmap img = new Bitmap(openFile.FileName);
-                ProcessingAlgo IP = new ProcessingAlgo(img, ref pictureB);
+                ProcessingAlgo IP = new ProcessingAlgo(ref pictureB);
                 IP.findCenter();
                 IP.printList();
             }

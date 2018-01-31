@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Circle
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace ImageProcessing
                 calculateRadius(a,b);
         }
 
-        public Circle(int x, int y, int r)
+        public Circle(int x, int y, float r)
         {
             cX = x;
             cY = y;

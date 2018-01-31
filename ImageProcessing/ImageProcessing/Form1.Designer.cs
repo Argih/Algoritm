@@ -68,6 +68,7 @@
             // openFile
             // 
             this.openFile.FileName = "openFile";
+            this.openFile.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
             // 
             // label1
             // 

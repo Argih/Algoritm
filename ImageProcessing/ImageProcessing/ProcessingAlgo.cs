@@ -1,4 +1,5 @@
-﻿using System;
+﻿//image processing
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,23 +18,22 @@ namespace ImageProcessing
         {
             list = new List<Circle>();
         }
-        public ProcessingAlgo(Bitmap img, ref PictureBox p)
+        public ProcessingAlgo(ref PictureBox p)
         {
-            bmp = new Bitmap(img);
+            bmp = new Bitmap(p.Image);
             picture = p;
             list = new List<Circle>();
         }    
-        public Bitmap getBmp() {return bmp; }
         public void printList()
         {
             for (int i=0; i<list.Count;i++)
             {
-                Console.WriteLine(list[i].getCenterX());
-                Console.WriteLine(list[i].getCentery());
-                Console.WriteLine(list[i].getRadius());
+                String myString = String.Format("{0}{1},{2}{3}", "{", list[i].getCentery(), list[i].getCenterX(),"}");
+                Console.WriteLine(myString);
+  
             }
         }
-        public void drawCircle(Circle c)
+        private void drawCircle(Circle c)
         {
             Graphics G = Graphics.FromImage(bmp);
             Pen pen = new Pen(Color.Red);
