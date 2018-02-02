@@ -38,10 +38,10 @@ namespace ImageProcessing
             Graphics G = Graphics.FromImage(bmp);
             Pen pen = new Pen(Color.Red);
             SolidBrush brush = new SolidBrush(Color.Red);
-            float F = 5f;
-            float d = c.getRadius();
-            int a = c.getCenterX()- (int)(d*2.5);
-            int b = c.getCentery()- (int)(d*2.5);
+            float F = 2f;
+            float d = c.getRadius()+2;
+            int a = c.getCenterX()- (int)(d);
+            int b = c.getCentery()- (int)(d);
            
             G.DrawEllipse(pen, a, b, d*F, d*F);
             G.FillEllipse(brush, a, b, d*F, d*F);

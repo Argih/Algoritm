@@ -16,7 +16,7 @@ namespace ImageProcessing
         {
             double n = Math.Pow((x - cX), 2);
             double t = Math.Pow((y - cY), 2);
-            radius =((float) Math.Sqrt(t))/2;
+            radius =((float) Math.Sqrt(t+n));
         }
         public Circle() { }
         public Circle(int x, int y, int a, int b)
