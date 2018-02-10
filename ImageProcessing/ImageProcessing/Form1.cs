@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace ImageProcessing
 {
     public partial class Form1 : Form
-    {   
+    {
+        Graphh graph;
+
         bool isOpen;
         public Form1()
         {
@@ -41,6 +43,7 @@ namespace ImageProcessing
                 ProcessingAlgo IP = new ProcessingAlgo(ref pictureB);
                 IP.findCenter();
                 IP.printList();
+                graph = new Graphh(IP.GetList());
             }
             else
             {
