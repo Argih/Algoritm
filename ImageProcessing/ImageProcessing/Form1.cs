@@ -44,6 +44,7 @@ namespace ImageProcessing
                 IP.findCenter();
                 IP.printList();
                 graph = new Graphh(IP.GetList());
+                graphButton.Enabled = true;
             }
             else
             {
@@ -51,5 +52,28 @@ namespace ImageProcessing
             }
         }
 
+        private void graphButton_Click(object sender, EventArgs e)
+        {
+            if (graph != null)
+            {
+                Bitmap imgGraph = new Bitmap(pictureB.Image);
+                Graphics graphic = Graphics.FromImage(imgGraph);
+                Pen pen1 = new Pen(Color.Black, 3);
+                foreach (vertice v in graph.getLV())
+                {
+                    foreach (Arist a in v.getLA())
+                    {
+                        Point pi = v.getPoint();
+                        Point pf = a.V.getPoint();
+                        graphic.DrawLine(pen1, pi, pf);
+                    }
+                }
+                pictureB.Image = imgGraph;
+            }
+            else
+            {
+                MessageBox.Show("Ningúna imagen detectada");
+            }
+        }
     }
 }

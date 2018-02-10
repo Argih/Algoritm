@@ -33,12 +33,13 @@
             this.pictureB = new System.Windows.Forms.PictureBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
+            this.graphButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB)).BeginInit();
             this.SuspendLayout();
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(662, 426);
+            this.load.Location = new System.Drawing.Point(662, 419);
             this.load.Name = "load";
             this.load.Size = new System.Drawing.Size(75, 23);
             this.load.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // detect
             // 
-            this.detect.Location = new System.Drawing.Point(662, 477);
+            this.detect.Location = new System.Drawing.Point(662, 448);
             this.detect.Name = "detect";
             this.detect.Size = new System.Drawing.Size(75, 23);
             this.detect.TabIndex = 0;
@@ -78,11 +79,23 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 2;
             // 
+            // graphButton
+            // 
+            this.graphButton.Enabled = false;
+            this.graphButton.Location = new System.Drawing.Point(662, 477);
+            this.graphButton.Name = "graphButton";
+            this.graphButton.Size = new System.Drawing.Size(75, 23);
+            this.graphButton.TabIndex = 3;
+            this.graphButton.Text = "Ver grafo";
+            this.graphButton.UseVisualStyleBackColor = true;
+            this.graphButton.Click += new System.EventHandler(this.graphButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 522);
+            this.Controls.Add(this.graphButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureB);
             this.Controls.Add(this.detect);
@@ -103,6 +116,7 @@
         private System.Windows.Forms.PictureBox pictureB;
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button graphButton;
     }
 }
 

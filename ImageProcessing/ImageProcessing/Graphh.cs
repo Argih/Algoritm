@@ -40,7 +40,10 @@ namespace ImageProcessing
                 }
             }
         }
-
+        public List<vertice> getLV() 
+        {
+            return lv;
+        }
 
 
 

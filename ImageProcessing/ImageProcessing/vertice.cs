@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,16 @@ namespace ImageProcessing
         {
             Arist ady = new Arist(v, p);
             la.Add(ady);
+        }
+
+        public List<Arist> getLA()
+        {
+            return la;
+        }
+
+        public Point getPoint()
+        {
+            return new Point(circle.getCenterX(), circle.getCentery());
         }
     }
 }

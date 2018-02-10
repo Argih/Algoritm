@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImageProcessing
 {
-    class Arist
+    public class Arist
     {
         double lenght;
         vertice v;
@@ -16,6 +16,7 @@ namespace ImageProcessing
             lenght = l;
         }
 
+        public vertice V { get => v; }
         public double Lenght { get => lenght; set => lenght = value; }
     }
 }
