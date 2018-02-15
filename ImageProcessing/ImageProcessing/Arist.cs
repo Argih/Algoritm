@@ -15,6 +15,11 @@ namespace ImageProcessing
             v = b;
             lenght = l;
         }
+        public Arist(Arist a)
+        {
+            lenght = a.lenght;
+            v = a.v;
+        }
 
         public vertice V { get => v; }
         public double Lenght { get => lenght; set => lenght = value; }

@@ -19,6 +19,12 @@ namespace ImageProcessing
             circle = c;
             name = n;
         }
+        public vertice(vertice a)
+        {
+            circle = a.circle;
+            name = a.name;
+            la = a.la;
+        }
         public Circle getCircle()
         {
             return circle;
@@ -38,6 +44,10 @@ namespace ImageProcessing
         public Point getPoint()
         {
             return new Point(circle.getCenterX(), circle.getCentery());
+        }
+        public int getName()
+        {
+            return name;
         }
     }
 }

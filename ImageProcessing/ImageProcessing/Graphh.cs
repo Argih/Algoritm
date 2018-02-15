@@ -44,6 +44,10 @@ namespace ImageProcessing
         {
             return lv;
         }
+        public int getListLengt()
+        {
+            return lv.Count;
+        }
 
 
 
