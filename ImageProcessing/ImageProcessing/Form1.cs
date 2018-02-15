@@ -45,7 +45,7 @@ namespace ImageProcessing
                 Bitmap img = new Bitmap(openFile.FileName);
                 ProcessingAlgo IP = new ProcessingAlgo(ref pictureB);
                 IP.findCenter();
-                IP.printList();
+                //IP.printList();
                 graph = new Graphh(IP.GetList());
                 graphButton.Enabled = true;
                 path.Enabled = true;
@@ -73,17 +73,19 @@ namespace ImageProcessing
                     }
                 }
                 pictureB.Image = imgGraph;
-              /*  foreach(vertice v in graph.getLV())
-                {
-                    String t = "";
+                String final="";
+              foreach(vertice v in graph.getLV())
+                {  
+                    String t = String.Format("{0}",v.getName());
                     foreach (Arist a in v.getLA())
                     {
-                        String myStrin = String.Format("{0}-", a.V.getName());
+                        String myStrin = String.Format("-{0}", a.V.getName());
                         t= t + myStrin;
                     }
-                    String final = "";
-                    final = final + t;
-                }*/
+                    final = final + t + "\r\n"+"|\r\n";
+                }
+                structure.Text = final;
+
             }
             else
             {
@@ -133,7 +135,7 @@ namespace ImageProcessing
             t = calcul();
             Bitmap imgGraph = new Bitmap(pictureB.Image);
             Graphics graphic = Graphics.FromImage(imgGraph);
-            SolidBrush b = new SolidBrush(Color.FromArgb(100, Color.Orange));
+            SolidBrush b = new SolidBrush(Color.FromArgb(126, Color.Yellow));
             Pen pen1 = new Pen(b,3);
             int m = t.Count;
             for (int i = 1; i <m;i++)

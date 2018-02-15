@@ -35,7 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.graphButton = new System.Windows.Forms.Button();
             this.path = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.structure = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,21 +104,33 @@
             this.path.UseVisualStyleBackColor = true;
             this.path.Click += new System.EventHandler(this.path_Click);
             // 
-            // textBox1
+            // structure
             // 
-            this.textBox1.Location = new System.Drawing.Point(662, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 272);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.structure.AcceptsReturn = true;
+            this.structure.Location = new System.Drawing.Point(662, 33);
+            this.structure.Multiline = true;
+            this.structure.Name = "structure";
+            this.structure.ReadOnly = true;
+            this.structure.Size = new System.Drawing.Size(156, 272);
+            this.structure.TabIndex = 5;
+            this.structure.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(663, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Estructura del Grafo";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 522);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.structure);
             this.Controls.Add(this.path);
             this.Controls.Add(this.graphButton);
             this.Controls.Add(this.label1);
@@ -143,7 +156,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button graphButton;
         private System.Windows.Forms.Button path;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox structure;
+        private System.Windows.Forms.Label label2;
     }
 }
 
