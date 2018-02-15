@@ -10,14 +10,14 @@
   <Class Name="ImageProcessing.Form1">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAKAAABAAAACAAAACQAACAAAAAAAAACAIAAA=</HashCode>
+      <HashCode>AAAAAAAgAKAAABAAAACAAAACSAACAAAAAAAAACBIAIA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ImageProcessing.ProcessingAlgo">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAIAAAAIAAAAAAAAAAAAEAABAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAIAAAAIAAAAAAAAAAAAEAABAAAAQAAAAAAI=</HashCode>
       <FileName>ProcessingAlgo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -26,6 +26,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageProcessing.Arist">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAABBAAAAQAAA=</HashCode>
+      <FileName>Arist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageProcessing.Graphh">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Graphh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageProcessing.vertice">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAACAAAAAAAAAAACIAAAAAEAAAAAAAAACAAACA=</HashCode>
+      <FileName>vertice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

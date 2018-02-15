@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ImageProcessing
 {
-    class Circle
+    public class Circle
     {
         private int cX, cY;
         private float radius;

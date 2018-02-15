@@ -23,7 +23,11 @@ namespace ImageProcessing
             bmp = new Bitmap(p.Image);
             picture = p;
             list = new List<Circle>();
-        }    
+        }  
+        public List<Circle> GetList()
+        {
+            return list;
+        }
         public void printList()
         {
             for (int i=0; i<list.Count;i++)
@@ -85,6 +89,7 @@ namespace ImageProcessing
                         list.Add(circle);
                         drawCircle(circle);
                         bmp.SetPixel(x_c, y_c, Color.White);
+                       // Graphh myGraph = new Graphh(list);
                     }
                 }
             }
